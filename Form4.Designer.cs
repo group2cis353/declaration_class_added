@@ -48,6 +48,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.displayTime = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.inputRequired = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -80,6 +81,7 @@
             this.plateSearch.Name = "plateSearch";
             this.plateSearch.Size = new System.Drawing.Size(150, 26);
             this.plateSearch.TabIndex = 3;
+            this.plateSearch.TextChanged += new System.EventHandler(this.plateSearch_TextChanged);
             // 
             // searchBtn
             // 
@@ -89,6 +91,7 @@
             this.searchBtn.TabIndex = 4;
             this.searchBtn.Text = "Search";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // backSearchBtn
             // 
@@ -245,11 +248,22 @@
             this.groupBox5.TabIndex = 20;
             this.groupBox5.TabStop = false;
             // 
+            // inputRequired
+            // 
+            this.inputRequired.AutoSize = true;
+            this.inputRequired.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputRequired.Location = new System.Drawing.Point(601, 80);
+            this.inputRequired.Name = "inputRequired";
+            this.inputRequired.Size = new System.Drawing.Size(134, 20);
+            this.inputRequired.TabIndex = 21;
+            this.inputRequired.Text = "Input Required.";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 451);
+            this.Controls.Add(this.inputRequired);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -264,6 +278,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form4";
             this.Text = "Vehicle Search";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -301,5 +316,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label displayTime;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label inputRequired;
     }
 }

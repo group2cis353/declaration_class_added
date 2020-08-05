@@ -41,9 +41,6 @@
             this.submitBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.btnPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.MakePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -52,10 +49,9 @@
             // 
             // MakePanel
             // 
-            this.MakePanel.Controls.Add(this.label2);
             this.MakePanel.Controls.Add(this.MakeInput);
             this.MakePanel.Controls.Add(this.makeLabel);
-            this.MakePanel.Location = new System.Drawing.Point(100, 100);
+            this.MakePanel.Location = new System.Drawing.Point(75, 100);
             this.MakePanel.Name = "MakePanel";
             this.MakePanel.Size = new System.Drawing.Size(800, 60);
             this.MakePanel.TabIndex = 0;
@@ -81,10 +77,9 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.ModeLInput);
             this.panel2.Controls.Add(this.modelLabel);
-            this.panel2.Location = new System.Drawing.Point(100, 175);
+            this.panel2.Location = new System.Drawing.Point(75, 175);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 60);
             this.panel2.TabIndex = 1;
@@ -110,10 +105,9 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.plateInput);
             this.panel3.Controls.Add(this.plateLabel);
-            this.panel3.Location = new System.Drawing.Point(100, 250);
+            this.panel3.Location = new System.Drawing.Point(75, 250);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 60);
             this.panel3.TabIndex = 2;
@@ -173,37 +167,10 @@
             // 
             this.btnPanel.Controls.Add(this.submitBtn);
             this.btnPanel.Controls.Add(this.backBtn);
-            this.btnPanel.Location = new System.Drawing.Point(100, 325);
+            this.btnPanel.Location = new System.Drawing.Point(75, 325);
             this.btnPanel.Name = "btnPanel";
             this.btnPanel.Size = new System.Drawing.Size(800, 60);
             this.btnPanel.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(580, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(580, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(580, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
             // 
             // Form2
             // 
@@ -219,6 +186,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Vehicle Details";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.MakePanel.ResumeLayout(false);
             this.MakePanel.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -246,8 +214,5 @@
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Panel btnPanel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }
