@@ -36,7 +36,6 @@
             this.makeSearch = new System.Windows.Forms.Label();
             this.modelSearch = new System.Windows.Forms.Label();
             this.dateSearch = new System.Windows.Forms.Label();
-            this.timeSearch = new System.Windows.Forms.Label();
             this.fineSearch = new System.Windows.Forms.Label();
             this.displayMake = new System.Windows.Forms.Label();
             this.displayModel = new System.Windows.Forms.Label();
@@ -45,14 +44,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.displayTime = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.inputRequired = new System.Windows.Forms.Label();
+            this.nextFineBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,9 +82,9 @@
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(192, 380);
+            this.searchBtn.Location = new System.Drawing.Point(124, 365);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(135, 30);
+            this.searchBtn.Size = new System.Drawing.Size(135, 45);
             this.searchBtn.TabIndex = 4;
             this.searchBtn.Text = "Search";
             this.searchBtn.UseVisualStyleBackColor = true;
@@ -95,9 +92,9 @@
             // 
             // backSearchBtn
             // 
-            this.backSearchBtn.Location = new System.Drawing.Point(457, 380);
+            this.backSearchBtn.Location = new System.Drawing.Point(519, 365);
             this.backSearchBtn.Name = "backSearchBtn";
-            this.backSearchBtn.Size = new System.Drawing.Size(135, 30);
+            this.backSearchBtn.Size = new System.Drawing.Size(135, 45);
             this.backSearchBtn.TabIndex = 5;
             this.backSearchBtn.Text = "Back";
             this.backSearchBtn.UseVisualStyleBackColor = true;
@@ -129,19 +126,9 @@
             this.dateSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateSearch.Location = new System.Drawing.Point(14, 17);
             this.dateSearch.Name = "dateSearch";
-            this.dateSearch.Size = new System.Drawing.Size(100, 20);
+            this.dateSearch.Size = new System.Drawing.Size(178, 20);
             this.dateSearch.TabIndex = 8;
-            this.dateSearch.Text = "Entry Date:";
-            // 
-            // timeSearch
-            // 
-            this.timeSearch.AutoSize = true;
-            this.timeSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeSearch.Location = new System.Drawing.Point(14, 17);
-            this.timeSearch.Name = "timeSearch";
-            this.timeSearch.Size = new System.Drawing.Size(99, 20);
-            this.timeSearch.TabIndex = 9;
-            this.timeSearch.Text = "Entry Time:";
+            this.dateSearch.Text = "Entry Date and Time:";
             // 
             // fineSearch
             // 
@@ -156,7 +143,7 @@
             // displayMake
             // 
             this.displayMake.AutoSize = true;
-            this.displayMake.Location = new System.Drawing.Point(189, 17);
+            this.displayMake.Location = new System.Drawing.Point(198, 17);
             this.displayMake.Name = "displayMake";
             this.displayMake.Size = new System.Drawing.Size(51, 20);
             this.displayMake.TabIndex = 11;
@@ -165,7 +152,7 @@
             // displayModel
             // 
             this.displayModel.AutoSize = true;
-            this.displayModel.Location = new System.Drawing.Point(189, 17);
+            this.displayModel.Location = new System.Drawing.Point(198, 17);
             this.displayModel.Name = "displayModel";
             this.displayModel.Size = new System.Drawing.Size(51, 20);
             this.displayModel.TabIndex = 12;
@@ -174,7 +161,7 @@
             // displayDate
             // 
             this.displayDate.AutoSize = true;
-            this.displayDate.Location = new System.Drawing.Point(189, 17);
+            this.displayDate.Location = new System.Drawing.Point(198, 17);
             this.displayDate.Name = "displayDate";
             this.displayDate.Size = new System.Drawing.Size(51, 20);
             this.displayDate.TabIndex = 13;
@@ -183,7 +170,7 @@
             // displayFine
             // 
             this.displayFine.AutoSize = true;
-            this.displayFine.Location = new System.Drawing.Point(189, 17);
+            this.displayFine.Location = new System.Drawing.Point(198, 17);
             this.displayFine.Name = "displayFine";
             this.displayFine.Size = new System.Drawing.Size(60, 20);
             this.displayFine.TabIndex = 15;
@@ -203,7 +190,7 @@
             // 
             this.groupBox2.Controls.Add(this.modelSearch);
             this.groupBox2.Controls.Add(this.displayModel);
-            this.groupBox2.Location = new System.Drawing.Point(192, 170);
+            this.groupBox2.Location = new System.Drawing.Point(192, 174);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(400, 48);
             this.groupBox2.TabIndex = 17;
@@ -213,36 +200,17 @@
             // 
             this.groupBox3.Controls.Add(this.dateSearch);
             this.groupBox3.Controls.Add(this.displayDate);
-            this.groupBox3.Location = new System.Drawing.Point(192, 220);
+            this.groupBox3.Location = new System.Drawing.Point(192, 228);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(400, 48);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.timeSearch);
-            this.groupBox4.Controls.Add(this.displayTime);
-            this.groupBox4.Location = new System.Drawing.Point(192, 270);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(400, 48);
-            this.groupBox4.TabIndex = 19;
-            this.groupBox4.TabStop = false;
-            // 
-            // displayTime
-            // 
-            this.displayTime.AutoSize = true;
-            this.displayTime.Location = new System.Drawing.Point(189, 17);
-            this.displayTime.Name = "displayTime";
-            this.displayTime.Size = new System.Drawing.Size(51, 20);
-            this.displayTime.TabIndex = 14;
-            this.displayTime.Text = "label9";
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.fineSearch);
             this.groupBox5.Controls.Add(this.displayFine);
-            this.groupBox5.Location = new System.Drawing.Point(192, 320);
+            this.groupBox5.Location = new System.Drawing.Point(192, 282);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(400, 48);
             this.groupBox5.TabIndex = 20;
@@ -258,14 +226,25 @@
             this.inputRequired.TabIndex = 21;
             this.inputRequired.Text = "Input Required.";
             // 
+            // nextFineBtn
+            // 
+            this.nextFineBtn.Location = new System.Drawing.Point(324, 365);
+            this.nextFineBtn.Name = "nextFineBtn";
+            this.nextFineBtn.Size = new System.Drawing.Size(135, 45);
+            this.nextFineBtn.TabIndex = 22;
+            this.nextFineBtn.Text = "Next Fine";
+            this.nextFineBtn.UseVisualStyleBackColor = true;
+            this.nextFineBtn.Visible = false;
+            this.nextFineBtn.Click += new System.EventHandler(this.nextFineBtn_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 451);
+            this.Controls.Add(this.nextFineBtn);
             this.Controls.Add(this.inputRequired);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -285,8 +264,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
@@ -304,7 +281,6 @@
         private System.Windows.Forms.Label makeSearch;
         private System.Windows.Forms.Label modelSearch;
         private System.Windows.Forms.Label dateSearch;
-        private System.Windows.Forms.Label timeSearch;
         private System.Windows.Forms.Label fineSearch;
         private System.Windows.Forms.Label displayMake;
         private System.Windows.Forms.Label displayModel;
@@ -313,9 +289,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label displayTime;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label inputRequired;
+        private System.Windows.Forms.Button nextFineBtn;
     }
 }

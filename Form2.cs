@@ -40,8 +40,8 @@ namespace Welcome_Page
         {
             if (Make != null && Model != null && Plate != null) // checks that all fields have been entered
             {
-                string message = "You have entered: \n " +
-                    "Make: " + Make + "\n " +
+                string message = "You have entered: \n" +
+                    "Make: " + Make + "\n" +
                     "Model: " + Model + "\n" +
                     "License Plate: " + Plate + "\n" +
                     "Is this correct?"; // message to verify input
@@ -51,8 +51,9 @@ namespace Welcome_Page
                 if (selection == DialogResult.Yes) // user selects yes
                 {
                     this.Hide(); // hides this form
-                    Form3 dForm = new Form3(); // instantiates Form3
+                    Form3 dForm = new Form3(Make, Model, Plate); // instantiates Form3
                     dForm.ShowDialog(); // opens Form3 (date details)
+                    this.Close();
                 }
                 else
                 {
@@ -73,8 +74,8 @@ namespace Welcome_Page
             this.Hide(); // hides this form
             Form1 wForm = new Form1(); // instantiates Form1
             wForm.ShowDialog(); // opens Form1 (welcome page)
+            this.Close();
         }
-
         private void Form2_Load(object sender, EventArgs e)
         {
 

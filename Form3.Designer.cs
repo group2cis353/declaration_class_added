@@ -34,6 +34,7 @@
             this.nextBtn = new System.Windows.Forms.Button();
             this.errorMessage = new System.Windows.Forms.Label();
             this.timeEntry = new System.Windows.Forms.DateTimePicker();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateEntry
@@ -78,7 +79,7 @@
             // errorMessage
             // 
             this.errorMessage.AutoSize = true;
-            this.errorMessage.Location = new System.Drawing.Point(353, 370);
+            this.errorMessage.Location = new System.Drawing.Point(180, 369);
             this.errorMessage.Name = "errorMessage";
             this.errorMessage.Size = new System.Drawing.Size(35, 13);
             this.errorMessage.TabIndex = 6;
@@ -97,11 +98,23 @@
             this.timeEntry.TabIndex = 7;
             this.timeEntry.ValueChanged += new System.EventHandler(this.timeEntry_ValueChanged);
             // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Location = new System.Drawing.Point(512, 349);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(115, 52);
+            this.cancelBtn.TabIndex = 8;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 451);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.timeEntry);
             this.Controls.Add(this.errorMessage);
             this.Controls.Add(this.nextBtn);
@@ -123,5 +136,6 @@
         private System.Windows.Forms.Button nextBtn;
         private System.Windows.Forms.Label errorMessage;
         private System.Windows.Forms.DateTimePicker timeEntry;
+        private System.Windows.Forms.Button cancelBtn;
     }
 }

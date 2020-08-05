@@ -39,6 +39,7 @@
             this.declareSubmit = new System.Windows.Forms.Button();
             this.totLabel = new System.Windows.Forms.Label();
             this.displayFine = new System.Windows.Forms.Label();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,9 +127,9 @@
             // 
             // declareSubmit
             // 
-            this.declareSubmit.Location = new System.Drawing.Point(358, 320);
+            this.declareSubmit.Location = new System.Drawing.Point(133, 334);
             this.declareSubmit.Name = "declareSubmit";
-            this.declareSubmit.Size = new System.Drawing.Size(100, 30);
+            this.declareSubmit.Size = new System.Drawing.Size(100, 45);
             this.declareSubmit.TabIndex = 5;
             this.declareSubmit.Text = "Submit";
             this.declareSubmit.UseVisualStyleBackColor = true;
@@ -153,11 +154,22 @@
             this.displayFine.TabIndex = 7;
             this.displayFine.Text = "label1";
             // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Location = new System.Drawing.Point(500, 334);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(100, 45);
+            this.cancelBtn.TabIndex = 8;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 451);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.displayFine);
             this.Controls.Add(this.totLabel);
             this.Controls.Add(this.declareSubmit);
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Button declareSubmit;
         private System.Windows.Forms.Label totLabel;
         private System.Windows.Forms.Label displayFine;
+        private System.Windows.Forms.Button cancelBtn;
     }
 }

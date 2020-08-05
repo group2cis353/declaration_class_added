@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Welcome_Page
 {
@@ -22,6 +23,7 @@ namespace Welcome_Page
             this.Hide();
             Form4 searchForm = new Form4();
             searchForm.ShowDialog();
+            this.Close();
         }
         //opens window to start entering a new assessment
         private void startAssessmentBtn_Click(object sender, EventArgs e)
@@ -29,6 +31,7 @@ namespace Welcome_Page
             this.Hide();
             Form2 vForm = new Form2();
             vForm.ShowDialog();
+            this.Close();
         }
         //double checks and ends program
         private void endProgramBtn_Click(object sender, EventArgs e)
@@ -45,7 +48,6 @@ namespace Welcome_Page
                 //program continues
             }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
