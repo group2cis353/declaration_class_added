@@ -74,14 +74,17 @@
             // 
             // plateSearch
             // 
+            this.plateSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.plateSearch.Location = new System.Drawing.Point(425, 80);
             this.plateSearch.Name = "plateSearch";
             this.plateSearch.Size = new System.Drawing.Size(150, 26);
             this.plateSearch.TabIndex = 3;
             this.plateSearch.TextChanged += new System.EventHandler(this.plateSearch_TextChanged);
+            this.plateSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.General_KeyDown);
             // 
             // searchBtn
             // 
+            this.searchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.Location = new System.Drawing.Point(124, 365);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(135, 45);
@@ -92,6 +95,7 @@
             // 
             // backSearchBtn
             // 
+            this.backSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backSearchBtn.Location = new System.Drawing.Point(519, 365);
             this.backSearchBtn.Name = "backSearchBtn";
             this.backSearchBtn.Size = new System.Drawing.Size(135, 45);
@@ -228,6 +232,7 @@
             // 
             // nextFineBtn
             // 
+            this.nextFineBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextFineBtn.Location = new System.Drawing.Point(324, 365);
             this.nextFineBtn.Name = "nextFineBtn";
             this.nextFineBtn.Size = new System.Drawing.Size(135, 45);
@@ -241,6 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(799, 451);
             this.Controls.Add(this.nextFineBtn);
             this.Controls.Add(this.inputRequired);

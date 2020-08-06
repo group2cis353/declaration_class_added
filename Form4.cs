@@ -141,5 +141,14 @@ namespace Welcome_Page
             }
             readFile.Close();
         }
+        //pressing enter in textbox acts as if user clicked search
+        private void General_KeyDown(object sender, KeyEventArgs e)
+        {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    e.SuppressKeyPress = true;
+                    searchBtn_Click(sender, e);
+                }
+        }
     }
 }

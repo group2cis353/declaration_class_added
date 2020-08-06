@@ -125,7 +125,7 @@ namespace Welcome_Page
                 DialogResult selection = MessageBox.Show(message, title, buttons);
                 if (selection == DialogResult.OK) // saves to file
                 {
-                    //check if there is a fine then formats data for save then saves to file
+                    //check if there is a fine, if there is, then formats data for save then saves to file
                     if (Duty.Fine != 0)
                     {
                         string fileLine = ToString();
@@ -135,7 +135,7 @@ namespace Welcome_Page
                         fileWrite.Flush();
                         writeFile.Close();
                     }
-                    //ask if user want to add another entry
+                    //ask if user wants to add another entry
                     string assessment = "Would you like to enter another assessment?";
                     string caption = "Another entry";
                     DialogResult result1 = MessageBox.Show(assessment, caption, MessageBoxButtons.YesNo);
@@ -193,6 +193,21 @@ namespace Welcome_Page
                 Form1 wForm = new Form1();
                 wForm.ShowDialog();
                 this.Close();
+            }
+        }
+        //pressing enter in textbox acts as if user clicked submit
+        private void General_KeyDown(object sender, KeyEventArgs e)
+        {
+            int value = 0;
+            bool numberEntered = false;
+            numberEntered = int.TryParse(caseTotal.Text, out value);
+            if (numberEntered)
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    e.SuppressKeyPress = true;
+                    declareSubmit_Click(sender, e);
+                }
             }
         }
     }

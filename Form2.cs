@@ -20,7 +20,6 @@ namespace Welcome_Page
             InitializeComponent();
         }
 
-
         private void MakeInput_TextChanged(object sender, EventArgs e) // method for user to input Make
         {
              Make = MakeInput.Text; // sets user input to Make variable
@@ -79,6 +78,15 @@ namespace Welcome_Page
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+        //pressing enter in textbox acts as tab
+        private void General_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                SendKeys.Send("{TAB}");
+            }
         }
     }
 }

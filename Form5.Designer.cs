@@ -93,9 +93,9 @@
             this.panel1.Controls.Add(this.caseInvalid);
             this.panel1.Controls.Add(this.caseTotal);
             this.panel1.Controls.Add(this.caseLabel);
-            this.panel1.Location = new System.Drawing.Point(10, 165);
+            this.panel1.Location = new System.Drawing.Point(37, 165);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 75);
+            this.panel1.Size = new System.Drawing.Size(712, 75);
             this.panel1.TabIndex = 4;
             // 
             // caseInvalid
@@ -114,6 +114,7 @@
             this.caseTotal.Size = new System.Drawing.Size(130, 26);
             this.caseTotal.TabIndex = 1;
             this.caseTotal.TextChanged += new System.EventHandler(this.caseTotal_TextChanged);
+            this.caseTotal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.General_KeyDown);
             // 
             // caseLabel
             // 
@@ -127,6 +128,7 @@
             // 
             // declareSubmit
             // 
+            this.declareSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.declareSubmit.Location = new System.Drawing.Point(133, 334);
             this.declareSubmit.Name = "declareSubmit";
             this.declareSubmit.Size = new System.Drawing.Size(100, 45);
@@ -156,6 +158,7 @@
             // 
             // cancelBtn
             // 
+            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.Location = new System.Drawing.Point(500, 334);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(100, 45);
@@ -168,6 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(799, 451);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.displayFine);

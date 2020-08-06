@@ -51,9 +51,9 @@
             // 
             this.MakePanel.Controls.Add(this.MakeInput);
             this.MakePanel.Controls.Add(this.makeLabel);
-            this.MakePanel.Location = new System.Drawing.Point(75, 100);
+            this.MakePanel.Location = new System.Drawing.Point(93, 100);
             this.MakePanel.Name = "MakePanel";
-            this.MakePanel.Size = new System.Drawing.Size(800, 60);
+            this.MakePanel.Size = new System.Drawing.Size(582, 60);
             this.MakePanel.TabIndex = 0;
             // 
             // MakeInput
@@ -61,9 +61,10 @@
             this.MakeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MakeInput.Location = new System.Drawing.Point(250, 20);
             this.MakeInput.Name = "MakeInput";
-            this.MakeInput.Size = new System.Drawing.Size(300, 26);
+            this.MakeInput.Size = new System.Drawing.Size(200, 26);
             this.MakeInput.TabIndex = 1;
             this.MakeInput.TextChanged += new System.EventHandler(this.MakeInput_TextChanged);
+            this.MakeInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.General_KeyDown);
             // 
             // makeLabel
             // 
@@ -79,9 +80,9 @@
             // 
             this.panel2.Controls.Add(this.ModeLInput);
             this.panel2.Controls.Add(this.modelLabel);
-            this.panel2.Location = new System.Drawing.Point(75, 175);
+            this.panel2.Location = new System.Drawing.Point(93, 175);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 60);
+            this.panel2.Size = new System.Drawing.Size(582, 60);
             this.panel2.TabIndex = 1;
             // 
             // ModeLInput
@@ -89,9 +90,10 @@
             this.ModeLInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModeLInput.Location = new System.Drawing.Point(250, 20);
             this.ModeLInput.Name = "ModeLInput";
-            this.ModeLInput.Size = new System.Drawing.Size(300, 26);
+            this.ModeLInput.Size = new System.Drawing.Size(200, 26);
             this.ModeLInput.TabIndex = 1;
             this.ModeLInput.TextChanged += new System.EventHandler(this.ModeLInput_TextChanged);
+            this.ModeLInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.General_KeyDown);
             // 
             // modelLabel
             // 
@@ -107,19 +109,21 @@
             // 
             this.panel3.Controls.Add(this.plateInput);
             this.panel3.Controls.Add(this.plateLabel);
-            this.panel3.Location = new System.Drawing.Point(75, 250);
+            this.panel3.Location = new System.Drawing.Point(93, 250);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 60);
+            this.panel3.Size = new System.Drawing.Size(582, 60);
             this.panel3.TabIndex = 2;
             // 
             // plateInput
             // 
+            this.plateInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.plateInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plateInput.Location = new System.Drawing.Point(250, 20);
             this.plateInput.Name = "plateInput";
-            this.plateInput.Size = new System.Drawing.Size(300, 26);
+            this.plateInput.Size = new System.Drawing.Size(200, 26);
             this.plateInput.TabIndex = 1;
             this.plateInput.TextChanged += new System.EventHandler(this.plateInput_TextChanged);
+            this.plateInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.General_KeyDown);
             // 
             // plateLabel
             // 
@@ -135,7 +139,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 35);
+            this.label1.Location = new System.Drawing.Point(203, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(312, 26);
             this.label1.TabIndex = 3;
@@ -144,7 +148,7 @@
             // submitBtn
             // 
             this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitBtn.Location = new System.Drawing.Point(250, 20);
+            this.submitBtn.Location = new System.Drawing.Point(67, 22);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(130, 35);
             this.submitBtn.TabIndex = 4;
@@ -155,7 +159,7 @@
             // backBtn
             // 
             this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.Location = new System.Drawing.Point(420, 20);
+            this.backBtn.Location = new System.Drawing.Point(372, 22);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(130, 35);
             this.backBtn.TabIndex = 5;
@@ -167,16 +171,17 @@
             // 
             this.btnPanel.Controls.Add(this.submitBtn);
             this.btnPanel.Controls.Add(this.backBtn);
-            this.btnPanel.Location = new System.Drawing.Point(75, 325);
+            this.btnPanel.Location = new System.Drawing.Point(93, 325);
             this.btnPanel.Name = "btnPanel";
-            this.btnPanel.Size = new System.Drawing.Size(800, 60);
+            this.btnPanel.Size = new System.Drawing.Size(582, 60);
             this.btnPanel.TabIndex = 6;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 451);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(799, 451);
             this.Controls.Add(this.btnPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
